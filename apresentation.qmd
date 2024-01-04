@@ -1,0 +1,98 @@
+---
+title: <font color='yellow' size= '18' face ='arial black'>  Curso Avançado de Quarto Potencializando a Documentação Científica com Inovação e Simplicidade📚📓📓📊📈 </font>
+author:
+  - <font  color='black' face='arial black' size ='6'> Joseferson Barreto, <br /> Graduado pela  Universidade da Paraíba </font>
+  #- Dr. Allison Horst, UC Santa Barbara
+  - <font  color='black' face='arial black' size ='6'> Dr. Tiago Oliveira, Universidade da Paraíba </font>
+format: 
+  revealjs:
+    multiplex: true
+    #footer: "[apreshill.github.io/palmerpenguins-useR-2022/](https://apreshill.github.io/palmerpenguins-useR-2022/)"
+   # theme: ["pp.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: img/noticia_0000046380-711x400.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+## Oque é o Quarto?
+
+Quarto", que é uma versão multilíngue da próxima geração do R Markdown, ele é uma extensão ou alternativa ao R Markdown, foi desenvolvido com a intenção de oferecer recursos adicionais e uma abordagem mais simplificada para a criação de documentos em Markdown. Neste curso abordaremos as principais funcionalidades do pacote além de compara-lo ao Rmarkdown, explicando suas possíveis vantagens e desvantagens..
+
+## Oque será abordado no Curso
+
+1.  criação de documentos
+
+::: incremental
+-   Inserção te tabelas
+-   Inserção te imagens
+-   Adição de scripts
+
+```{r,echo=FALSE}
+# para adicionar essa formatação  de item deve-se clicar nos 3 pontinhos (ir na opção "item display"  e selecionar a opção "incremental(one item at a time))
+```
+:::
+
+2.  Crie apresentações no Quarto
+
+3.  publique seu documento quarto no github pages ou R Pubs
+
+4.  Correção do erro: "Unable to locate an installed version of R. Install R from <https://cloud.r-project.org/>
+
+## Arquivos Necessários
+
+Faça o download dos arquivos necessários
+
+1.  **Rmarkdown:** <https://download1.rstudio.org/electron/windows/RStudio-2023.12.0-369.exe>
+
+2.  baixe o **R** : <https://cran.rstudio.com/bin/windows/>
+
+3.  **GIT Bash**: <https://git-scm.com/download/win>
+
+```         
+```
+
+# Configurando o GITHUB no RStudio
+
+> "Instalação do pacote **usethis**"
+
+-   Instalação do pacote **usethis**
+
+```{r echo=TRUE,eval=FALSE}
+install.packages("usethis")
+```
+
+# Configurando o Usuário
+
+> "Após download do **Git Bash** e instalação do pacote **usethis** no **Rstudio** o próximo passo é configurar o seu usuário do Git"
+
+```{r echo=TRUE,eval=FALSE}
+ usethis::use_git_config(# Seu nome
+    user.name = "seu usuário Git", 
+    # Seu email
+    user.email = "meuemail@gmail.com")
+```
+
+# Configurando o Token
+
+> "Após configuração do usuário temos que configurar um token para termos acesso ao **Git** pelo nosso **Rstudio**"
+
+```{r echo=TRUE ,eval=FALSE}
+usethis::create_github_token()
+```
+
+-   você será redirecionado para a pagina de criação do token, defina um nome e o tempo limite, copie e salve o token.
+
+# Definindo no Ambiente
+
+> "Após copiarmos o token de acesso,vamos definir o acesso **Git** no ambiente , para isso vamos abrir o **R.environ**"
+
+```{r echo=TRUE ,eval=FALSE}
+usethis::edit_r_environ()
+```
+
+-   Uma nova aba será aberta em branco, digite **GITHUB_PAT=**"seu código token" dê um espaço e pule uma linha, por último salve as alterações e reinicie o Rstudio.
+
+# pronto! o seu Github já está integrado ao RStudio!
