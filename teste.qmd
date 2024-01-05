@@ -172,21 +172,21 @@ kable(head(dados, 10))
 
 ```{r warning=FALSE, echo=FALSE, message=FALSE}
 
-# Criar a nova variável "dia_mes"
-dados <- dados %>%
-  group_by(mes) %>%
-  mutate(
-    dia_mes = rep(paste0("dia ", rep(1:30, each = 2)), length.out = n())
-  )
+# # Criar a nova variável "dia_mes"
+# dados <- dados %>%
+#   group_by(mes) %>%
+#   mutate(
+#     dia_mes = rep(paste0("dia ", rep(1:30, each = 2)), length.out = n())
+#   )
+# 
+# # Visualizar os dados resultantes
+# print(dados)
 
-# Visualizar os dados resultantes
-print(dados)
 
 
-
-# Criar a nova variável "dia_mes_com_mes"
-dados <- dados %>%
-  mutate(dia_mes_com_mes = paste(dia_mes, mes, sep = " "))
+# # Criar a nova variável "dia_mes_com_mes"
+# dados <- dados %>%
+#   mutate(dia_mes_com_mes = paste(dia_mes, mes, sep = " "))
 
 
 
@@ -216,21 +216,21 @@ require(lattice)
 par(bg = '#9ac7db')
 
 
-
-# Garantir que a coluna dias seja um fator
-banco$dias <- factor(banco$dias, levels = unique(banco$dias))
-
-
-# Ordenar o conjunto de dados pelo fator dias
-banco <- banco %>%
-  arrange(dias)
-
-# Exibir os dados ordenados
-print(banco)
-
-
-data.frame(factor(banco$dias))
-teste<-banco %>% order_by(factor(banco$dias))
+# 
+# # Garantir que a coluna dias seja um fator
+# banco$dias <- factor(banco$dias, levels = unique(banco$dias))
+# 
+# 
+# # Ordenar o conjunto de dados pelo fator dias
+# banco <- banco %>%
+#   arrange(dias)
+# 
+# # Exibir os dados ordenados
+# print(banco)
+# 
+# 
+# data.frame(factor(banco$dias))
+# teste<-banco %>% order_by(factor(banco$dias))
 xyplot(prod ~ turno|tipos_rações, groups=tipos_rações, data=banco, pch=c(19,20,1),auto.key=TRUE, jitter.x=T)
 ```
 
