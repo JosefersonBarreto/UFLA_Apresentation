@@ -1,0 +1,35 @@
+
+ul ul {
+    list-style-type: square;
+    /*background-color: black;  */ 
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+
+#TOC {
+    position: fixed;
+    left: 20px;
+    top: 50px;
+    width: 400px;
+    background-color: #f9f9f9;
+    border: 2px solid #aaa;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+}
+
+body {
+    font-family: "Times New Roman", Times, serif; /* muda a font do documento*/
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: #2c2d2e;
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgb(105 42 42 / 0%);
+   /* background-color: antiquewhite;*/
+}
