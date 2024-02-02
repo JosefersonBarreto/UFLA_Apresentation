@@ -5,6 +5,8 @@ format: html
 editor: visual
 ---
 
+
+
 <!-- ```{=html} -->
 
 <!-- <style> -->
@@ -118,7 +120,7 @@ kable(head(dados, 10))
 ```
 
 ```{r warning=FALSE, echo=FALSE, message=FALSE}
-quarto use template nmfs-opensci/quarto_titlepages
+#quarto use template nmfs-opensci/quarto_titlepages
 
 
 

@@ -172,21 +172,21 @@ kable(head(dados, 10))
 
 ```{r warning=FALSE, echo=FALSE, message=FALSE}
 
-# Criar a nova variável "dia_mes"
-dados <- dados %>%
-  group_by(mes) %>%
-  mutate(
-    dia_mes = rep(paste0("dia ", rep(1:30, each = 2)), length.out = n())
-  )
+# # Criar a nova variável "dia_mes"
+# dados <- dados %>%
+#   group_by(mes) %>%
+#   mutate(
+#     dia_mes = rep(paste0("dia ", rep(1:30, each = 2)), length.out = n())
+#   )
+# 
+# # Visualizar os dados resultantes
+# print(dados)
 
-# Visualizar os dados resultantes
-print(dados)
 
 
-
-# Criar a nova variável "dia_mes_com_mes"
-dados <- dados %>%
-  mutate(dia_mes_com_mes = paste(dia_mes, mes, sep = " "))
+# # Criar a nova variável "dia_mes_com_mes"
+# dados <- dados %>%
+#   mutate(dia_mes_com_mes = paste(dia_mes, mes, sep = " "))
 
 
 
@@ -216,7 +216,11 @@ require(lattice)
 par(bg = '#9ac7db')
 
 
+<<<<<<< HEAD
 
+=======
+# 
+>>>>>>> 34d6813bd728be26f891a3327b75c06e1df46f6b
 # # Garantir que a coluna dias seja um fator
 # banco$dias <- factor(banco$dias, levels = unique(banco$dias))
 # 
