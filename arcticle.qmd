@@ -1,40 +1,58 @@
 ---
 title: "Untitled"
+author: josefersonm
 format: html
 editor: visual
 ---
 
 <!-- ```{=html} -->
+
 <!-- <style> -->
+
 <!-- div.blue pre { background-color:lightblue; } -->
+
 <!-- div.blue pre.r { background-color:"#9ac7db"; } -->
+
 <!-- </style> -->
+
 <!-- ``` -->
+
 <!-- <div class = "blue"> -->
 
 <!-- <font color='black'> -->
 
 <!-- ```{css my-header-colors, echo = FALSE} -->
+
 <!-- .page-header { -->
+
 <!--      color: #fff; -->
+
 <!--   text-align: center; -->
+
 <!--   background-color: #9ac7db; -->
+
 <!--     background-image: linear-gradient(120deg, #11706f, #9ac7db); -->
+
 <!-- } -->
 
 <!-- body { -->
+
 <!--   background-color: #9ac7db; -->
 
 <!-- } -->
 
 <!-- badCode { -->
-<!-- background-color: red; -->
-<!-- } -->
 
+<!-- background-color: red; -->
+
+<!-- } -->
 
 <!-- .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover { -->
+
 <!--     background-color: purple; -->
+
 <!-- } -->
+
 <!-- ``` -->
 
 # <font color='black' face="Arial Black"> Relatório referente à análise de um banco de dados em DBC, utilizando parcela subdividida. </font>

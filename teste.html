@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.533">
+<meta name="generator" content="quarto-1.4.545">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -196,10 +196,10 @@ background-color: red;
 <font color="black" face="arial black" size="18">Análise da produção de Leite em um Fazenda Utilizando DBC </font>
 </h1>
 <div class="text-left">
-Joseferson Barreto<br>Graduado em Estatística<br>Universidade Estadual da Paraíba
+<p>Joseferson Barreto<br>Graduado em Estatística<br>Universidade Estadual da Paraíba</p>
 </div>
 <div class="text-right">
-Dr.&nbsp;Tiago Almeida<br>Universidade Estadual da Paraíba
+<p>Dr.&nbsp;Tiago Almeida<br>Universidade Estadual da Paraíba</p>
 </div>
 </div>
 <!-- # <font color='black' face="Arial Black"> Relatório referente à análise de um banco de dados em DBC, utilizando parcela subdividida. </font> -->
@@ -247,7 +247,7 @@ Dr.&nbsp;Tiago Almeida<br>Universidade Estadual da Paraíba
 <h3 class="anchored" data-anchor-id="visualização-dos-10-primeiros-dados-do-banco-de-dados"><font color="black" face="Arial Black"> Visualização dos 10 primeiros dados do Banco de Dados</font></h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/joseferson/Documents/joseferson/JosefersonBarreto/advanced_quarto_for_Rstudio"</code></pre>
+<pre><code>[1] "C:/Users/joseferson/Documents/joseferson/UFLA_Apresentation"</code></pre>
 </div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
@@ -346,6 +346,25 @@ Dr.&nbsp;Tiago Almeida<br>Universidade Estadual da Paraíba
 </table>
 </div>
 </div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 360 × 7
+# Groups:   mes [6]
+   racao_Comun Turno mes          pasta_bovin  soja   rep dia_mes
+   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  
+ 1 26          dia   primeiro mês          41    41     1 dia 1  
+ 2 26          tarde primeiro mês          41    41     1 dia 1  
+ 3 33          dia   primeiro mês          37    39     1 dia 2  
+ 4 25          tarde primeiro mês          40    37     1 dia 2  
+ 5 29          dia   primeiro mês          37    39     1 dia 3  
+ 6 34          tarde primeiro mês          36    40     1 dia 3  
+ 7 28          dia   primeiro mês          36    38     1 dia 4  
+ 8 27          tarde primeiro mês          40    41     1 dia 4  
+ 9 29          dia   primeiro mês          37    37     1 dia 5  
+10 32          tarde primeiro mês          39    43     1 dia 5  
+# ℹ 350 more rows</code></pre>
+</div>
+</div>
 </section>
 <section id="análise-descritiva" class="level2">
 <h2 class="anchored" data-anchor-id="análise-descritiva"><font color="black" face="Arial Black"> Análise Descritiva </font></h2>
@@ -394,11 +413,11 @@ Dr.&nbsp;Tiago Almeida<br>Universidade Estadual da Paraíba
 <p><span class="math inline">\(H_0 :\)</span> Não existe diferença entre os tratamentos para <span class="math inline">\(P \ge 0,05\)</span></p>
 <p><span class="math inline">\(H_1 :\)</span> ao menos um dos tratamentos diferem entre si <span class="math inline">\(P &lt; 0,05\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(banco)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>dados1.av <span class="ot">=</span> <span class="fu">aov</span>(prod <span class="sc">~</span> tipos_rações<span class="sc">*</span>turno <span class="sc">+</span> <span class="fu">Error</span>(blocos<span class="sc">:</span>tipos_rações), <span class="at">data =</span> banco)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dados1.av) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(banco)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>dados1.av <span class="ot">=</span> <span class="fu">aov</span>(prod <span class="sc">~</span> tipos_rações<span class="sc">*</span>turno <span class="sc">+</span> <span class="fu">Error</span>(blocos<span class="sc">:</span>tipos_rações), <span class="at">data =</span> banco)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dados1.av) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Error: blocos:tipos_rações
@@ -420,8 +439,8 @@ Residuals          1059   6097   5.757               </code></pre>
 <section id="análise-de-resíduos" class="level1">
 <h1><font color="black" face="Arial Black"> Análise de Resíduos </font></h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dados.avb <span class="ot">=</span> <span class="fu">aov</span>(prod <span class="sc">~</span> tipos_rações<span class="sc">*</span>turno <span class="sc">+</span> blocos<span class="sc">*</span>tipos_rações<span class="sc">-</span>blocos,<span class="at">data =</span>banco)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dados.avb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dados.avb <span class="ot">=</span> <span class="fu">aov</span>(prod <span class="sc">~</span> tipos_rações<span class="sc">*</span>turno <span class="sc">+</span> blocos<span class="sc">*</span>tipos_rações<span class="sc">-</span>blocos,<span class="at">data =</span>banco)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dados.avb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                      Df Sum Sq Mean Sq  F value Pr(&gt;F)    
 tipos_rações           2  19952    9976 1732.751 &lt;2e-16 ***
@@ -435,9 +454,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>Podemos Observar Que o fator Turno deu significativo logo pelo menos um dos tipos de ração diferentes entre si.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">'#9ac7db'</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dados.avb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">'#9ac7db'</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dados.avb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -459,7 +478,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p><span class="math inline">\(H_0 :\)</span> existe normalidade nos resíduos para <span class="math inline">\(P \ge 0,05\)</span></p>
 <p><span class="math inline">\(H_1 :\)</span> não existe normalidade dos resíduos <span class="math inline">\(P &lt; 0,05\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(dados.avb<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(dados.avb<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Shapiro-Wilk normality test
@@ -494,7 +513,7 @@ W = 0.99325, p-value = 8.042e-05</code></pre>
 <p><span class="math inline">\(H_0 :\)</span> existe homogenidade na variância para <span class="math inline">\(P \ge 0,05\)</span></p>
 <p><span class="math inline">\(H_1 :\)</span> não existe homogenidade na variância <span class="math inline">\(P &lt; 0,05\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(dados.avb<span class="sc">$</span>residuals, turno)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(dados.avb<span class="sc">$</span>residuals, turno)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Bartlett test of homogeneity of variances
@@ -502,7 +521,7 @@ W = 0.99325, p-value = 8.042e-05</code></pre>
 data:  dados.avb$residuals and turno
 Bartlett's K-squared = 2.4857, df = 1, p-value = 0.1149</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(dados.avb<span class="sc">$</span>residuals, tipos_rações)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bartlett.test</span>(dados.avb<span class="sc">$</span>residuals, tipos_rações)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Bartlett test of homogeneity of variances
@@ -516,9 +535,9 @@ Bartlett's K-squared = 2.6108, df = 2, p-value = 0.2711</code></pre>
 <h3 class="anchored" data-anchor-id="análise-utilizando-o-pacote-expdes.pt"><font color="black" face="Arial Black"> Análise utilizando o pacote <code>ExpDes.pt</code> </font></h3>
 <p>Para realiza o dbC(<strong>O delineamento em blocos casualizado</strong> ) vamos utilizar a função <strong>psub2.dbc</strong> da biblioteca <strong>ExpDes.pt</strong> onde <strong>tipos_rações</strong> é os tipos de rações , e <strong>turno</strong> é os os turnos do dia em que ocorreram coleta do leite,<strong>blocos</strong> são as repetições do experimento ,<strong>prod</strong> são os valores observados <strong>mcomp=</strong> com o argumento “Tukey” para observar qual a fator teve um melhor desempenho na produção do leite <strong>psub2.dbc</strong> considera o nível de significancia de 0,05% para a execução do teste .</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ExpDes.pt)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">psub2.dbc</span>(tipos_rações, turno, blocos, prod, <span class="at">quali =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>),<span class="at">mcomp =</span> <span class="st">"tukey"</span>,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fac.names =</span> <span class="fu">c</span>(<span class="st">"rações"</span>, <span class="st">"turno"</span>), <span class="at">sigF =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ExpDes.pt)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">psub2.dbc</span>(tipos_rações, turno, blocos, prod, <span class="at">quali =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>),<span class="at">mcomp =</span> <span class="st">"tukey"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fac.names =</span> <span class="fu">c</span>(<span class="st">"rações"</span>, <span class="st">"turno"</span>), <span class="at">sigF =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>------------------------------------------------------------------------
 Legenda:
@@ -569,15 +588,15 @@ De acordo com o teste F, as medias desse fator sao estatisticamente iguais.
 <section id="comparação-de-media-para-turno" class="level1">
 <h1><font color="black" face="Arial Black"> Comparação de media para turno </font></h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>media_t<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"media_turno.xlsx"</span>)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>media_t <span class="sc">%&gt;%</span><span class="fu">datatable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>media_t<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"media_turno.xlsx"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>media_t <span class="sc">%&gt;%</span><span class="fu">datatable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-adbe23c59b3ccf374d9b" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-adbe23c59b3ccf374d9b">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["dia","tarde"],["24.40","24.59"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Niveis<\/th>\n      <th>Médias<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Niveis","targets":1},{"name":"Médias","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-ecbaa379093f093db372" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ecbaa379093f093db372">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["dia","tarde"],["24.40","24.59"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Niveis<\/th>\n      <th>Médias<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Niveis","targets":1},{"name":"Médias","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>segundo o teste F as medias dos niveis do fator Turno foram iguais,como não temos diferença significativa pelo teste f,logo ,as medias dos níveis do fator são estatisticamente iguais</p>
@@ -585,15 +604,15 @@ De acordo com o teste F, as medias desse fator sao estatisticamente iguais.
 <section id="comparação-de-media-para-raçãoes" class="level1">
 <h1><font color="black" face="Arial Black"> Comparação de media para raçãoes </font></h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>media_R<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"media_rações.xlsx"</span>)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>media_R <span class="sc">%&gt;%</span><span class="fu">datatable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>media_R<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"media_rações.xlsx"</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>media_R <span class="sc">%&gt;%</span><span class="fu">datatable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-948dac6ab246daec0dc5" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-948dac6ab246daec0dc5">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["a","a","b"],["soja","pasta bovina","ração comum"],[28.028,27.025,18.45]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>grupos<\/th>\n      <th>Tratamentos<\/th>\n      <th>Medias<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"grupos","targets":1},{"name":"Tratamentos","targets":2},{"name":"Medias","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-9652d837a5f8bd2859dd" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9652d837a5f8bd2859dd">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],["a","a","b"],["soja","pasta bovina","ração comum"],[28.028,27.025,18.45]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>grupos<\/th>\n      <th>Tratamentos<\/th>\n      <th>Medias<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"grupos","targets":1},{"name":"Tratamentos","targets":2},{"name":"Medias","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>podemos perceber que temos diferenças nos níveis do fator tipo de rações pelo teste F, logo , pelo o teste de tukey(comparação de médias) temos que soja e pasta bovina apresentaram os melhores resultados</p>
@@ -935,7 +954,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

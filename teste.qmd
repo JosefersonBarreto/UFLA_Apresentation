@@ -217,20 +217,20 @@ par(bg = '#9ac7db')
 
 
 
-# Garantir que a coluna dias seja um fator
-banco$dias <- factor(banco$dias, levels = unique(banco$dias))
-
-
-# Ordenar o conjunto de dados pelo fator dias
-banco <- banco %>%
-  arrange(dias)
-
-# Exibir os dados ordenados
-print(banco)
-
-
-data.frame(factor(banco$dias))
-teste<-banco %>% order_by(factor(banco$dias))
+# # Garantir que a coluna dias seja um fator
+# banco$dias <- factor(banco$dias, levels = unique(banco$dias))
+# 
+# 
+# # Ordenar o conjunto de dados pelo fator dias
+# banco <- banco %>%
+#   arrange(dias)
+# 
+# # Exibir os dados ordenados
+# print(banco)
+# 
+# 
+# data.frame(factor(banco$dias))
+# teste<-banco %>% order_by(factor(banco$dias))
 xyplot(prod ~ turno|tipos_rações, groups=tipos_rações, data=banco, pch=c(19,20,1),auto.key=TRUE, jitter.x=T)
 ```
 

@@ -27,7 +27,9 @@ Quarto", que é uma versão multilíngue da próxima geração do R Markdown, el
 
 ::: incremental
 -   Inserção te tabelas
+
 -   Inserção te imagens
+
 -   Adição de scripts
 
 ```{r,echo=FALSE}
@@ -36,6 +38,7 @@ Quarto", que é uma versão multilíngue da próxima geração do R Markdown, el
 :::
 
 2.  Crie apresentações no Quarto
+
 
 3.  publique seu documento quarto no github pages ou R Pubs
 
