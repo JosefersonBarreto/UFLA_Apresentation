@@ -28,7 +28,7 @@ editor: visual
 
 # Carregando Algumas Bibliotecas
 
-Primeiramente vamos carregar algumas bibliotecas que usaremos em nossas análises .
+Primeiramente vamos carregar algumas bibliotecas que usaremos em nossas análises.
 
 -   A biblioteca **readxl** @readxl para ler o conjunto de dados do excel.
 
